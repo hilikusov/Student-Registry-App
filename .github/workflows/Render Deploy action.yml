@@ -1,12 +1,12 @@
 name: My Deploy
 
 on:
+
   workflow_run:
     workflows: ["Node.js CI"]       # Name of the workflow to depend on
     types:
       - completed            # Run when the workflow completes
 
-on:
   push:
     branches: [ main ]
   pull_request:
